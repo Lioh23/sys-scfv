@@ -17,4 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tecnicos', 'TecnicoController@index');
+
+Route::prefix('tecnicos')->group(function () {
+    Route::get('/', 'TecnicoController@index')->name('tecnicos.index');
+    Route::get('/novo', 'TecnicoController@create')->name('tecnicos.novo');
+    Route::post('/store', 'TecnicoController@store')->name('tecnicos.guardar'); 
+    Route::get('/delete/{id}', 'TecnicoController@destroy')->name('tecnicos.destroy');
+    Route::get('/editar/{id}', 'TecnicoController@edit')->name('tecnicos.edit');
+});
+
+Route::get('/layoutTest', function() {
+    return view('test');
+});

@@ -15,6 +15,7 @@ class CreateMembroFamiliasTable extends Migration
     {
         Schema::create('membro_familias', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('familia_id')->constrained('familias');
             $table->string('nome', 120);
             $table->date('dt_nasc');
             $table->string('parentesco', 40);

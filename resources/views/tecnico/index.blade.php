@@ -1,45 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layout.layout_default')
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href=" {{ asset('css/app.css') }}">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container mt-4">
-      <div class="card text-center">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Cadastros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body">
-          <h4 class="card-title mb-5">Técnicos Cadastrados</h4>
-            <table class="table">
-                <thead>
-                    <th>Nome</th>
-                    <th>Função</th>
-                    <th>Ações</th>
-                </thead>
-                <tbody>
-                    <td>Teste cunha dias</td>
-                    <td>Piscólogo</td>
-                </tbody>
-            </table>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+@section('content')
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex flex-row-reverse bd-highlight">
+      <div class="bd-highlight">
+        <a href="{{ route('tecnicos.novo') }}" class="btn btn-success">Novo Técnico</a>
       </div>
     </div>
+    <h4 class="card-title mb-5">Técnicos Cadastrados</h4>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+          <th style="width: 70%">Nome</th>
+          <th style="width: 20%">Função</th>
+          <th style="width: 10%">Ações</th>
+      </thead>
+      @if(isset($tecnicos))
+    
+      <tbody>
+        @foreach ($tecnicos as $tecnico)
+        <tr>
+          <td><?= $tecnico['nome'] ?></td>
+          <td><?= $tecnico['funcao'] ?></td>
+          <td>
+            <a href="{{ route('tecnicos.edit', $tecnico['id']) }}"><i class="fa fa-pencil mr-2" aria-hidden="true"></i></a>
+            <a href="{{ route('tecnicos.destroy', $tecnico['id']) }}"><i class="fa fa-trash-o text-danger"></i></a>
+          </td>
+          
+        </tr>
+        @endforeach
+      </tbody>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
+      @endif
+    </table>
+  </div>
+</div>
+
+
+
+@endsection

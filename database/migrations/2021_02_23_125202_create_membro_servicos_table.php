@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicoConvivenciasTable extends Migration
+class CreateMembroServicosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateServicoConvivenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('servico_convivencias', function (Blueprint $table) {
+        Schema::create('membro_servicos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('tecnico_id')->constrained('tecnicos');
-            $table->string('nome', 120);
-            $table->longText('descricao');
-            $table->string('turno', 30);
+            $table->foreignId('membro_familia_id')->constrained('membro_familias');
+            $table->foreignId('servico_convivencia_id')->constrained('servico_convivencias');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateServicoConvivenciasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('servico_convivencias');
+        Schema::dropIfExists('membro_servicos');
     }
 }
