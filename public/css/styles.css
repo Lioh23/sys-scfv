@@ -1,0 +1,195 @@
+* {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+html {
+	height: auto;
+}
+
+body {
+	margin: 0;
+	border: 0;
+	width: 100%;
+	min-height: 100%;
+	background: radial-gradient(circle, rgba(25,240,209,1) 0%, rgba(28,129,143,1) 100%);
+}
+
+
+
+/*FORMULARIO DE CADASTRO*/
+
+label {
+	color: gray;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+option {
+	color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.flex-row {
+	display: flex;
+	padding-bottom: 5px;
+}
+
+
+#app {
+	width: 100%;
+
+}
+
+.flex-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding: 0 15px;
+}
+
+.page-title {
+	font-size: 2.4em;
+	font-weight: normal;
+	margin-bottom: 30px;
+	color: #FDFDFD;
+	letter-spacing: 3px;
+}
+
+#app .frame {
+	background: #fff;
+	padding: 25px;
+	border: 1px solid lightgray;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	float: left;
+
+	width: 100%;
+}
+
+fieldset {
+	padding: 15px 7px;
+	border-radius: 10px;
+	border: 2px solid #089a85;
+	margin-bottom: 30px;
+	background: #fefefe;
+}
+
+legend {
+	padding: 0 15px;
+	color: gray;
+	font-weight: bold;
+}
+
+.add-member {
+	float: right;
+	margin-right: 15px;
+	font-size: 1.2em;
+}
+
+.form-item {
+	padding: 0 10px;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+	width: 100%;
+	display: block;
+	padding: 5px;
+	font-size: .9rem;
+	margin: 4px 0;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+}
+
+.btn-submit {
+	float: right;;
+	border: none;
+	background: #1c818f;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 5px 13px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+#insert-user {
+	background-color: white;
+	border-radius: 7px;
+	padding: 3px;
+	border: 2px solid #089a85;
+	color: #089a85;
+	font-weight: bold;
+	position: relative;
+	bottom: 20px;
+	transition: all .1s ease;
+}
+
+#insert-user:hover {
+	background-color: #089a85;
+	color: white;
+	cursor: pointer;
+}
+
+.btn-submit:hover {
+	background-color: #089a85;
+}
+
+.users {
+	transition: all .5s ease;
+}
+
+/* new-button */
+.personal-button {
+	background-color: transparent;
+	border-radius: 6px;
+	padding: 6px;
+	border: 2px solid white;
+	color: white;
+	font-weight: bold;
+	bottom: 20px;
+	cursor: pointer;
+	transition: all .2s ease;
+	position: relative;
+	top: 5px;
+	right: 10px;
+}
+
+.personal-button:hover {
+	color: #56ecd5;
+	border-color: #56ecd5;
+    text-decoration: none;
+}
+
+/*Tabela*/
+
+
+.thead-personal {
+	background-color: #089a85;
+	color: white
+}
+
+tbody {
+	line-height: 35px;
+	font-weight: bold;
+	color: #43504e;
+	border-bottom: 2px solid gray;
+	font-size: 0.9em;
+}
+
+tbody tr {
+
+}
+
+@media(min-width: 1367px) {
+	#app > main {
+
+		margin: 0 auto;
+	}
+}

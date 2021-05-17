@@ -1,4 +1,3 @@
-            
 
           </div> <!-- fim container-fluid -->
         </div> <!-- fim page content wrapper -->
@@ -13,7 +12,7 @@
         $("#wrapper").toggleClass("toggled");
     });
 
-    
+
     </script>
 </body>
 </html>

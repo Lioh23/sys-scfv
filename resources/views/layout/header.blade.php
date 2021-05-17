@@ -8,14 +8,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href=" {{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <title>Técnicos</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <title>@yield('titulo')</title>
 
 </head>
 <body>
   <div class="container">
     <div class="row">
         <div id="wrapper">
-                
+
           <!-- Sidebar -->
           <div id="sidebar-wrapper">
               <ul class="sidebar-nav" style="margin-left:0;">
@@ -24,7 +25,7 @@
                   </li>
                   <li>
                     <a href="#submenuTecnicos" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="submentuTecnicos" class="collapsed">
-                      <i class="fa fa-user-o" aria-hidden="true"></i> 
+                      <i class="fa fa-user-o" aria-hidden="true"></i>
                       <span style="margin-left:10px;">Técnicos</span>
                       <span class="button-down"> <i class="fa fa-angle-down"></i> </span>
                     </a>
@@ -48,9 +49,8 @@
             <!-- /#sidebar-wrapper -->
 
             <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    
-                                      
 
-        
+            <div id="page-content-wrapper">
+                <div class="container-fluid" id="app">
+
+

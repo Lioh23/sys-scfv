@@ -10,7 +10,7 @@ body {
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
-    
+
 }
 
 #wrapper.toggled {
@@ -21,13 +21,13 @@ body {
     z-index: 1000;
     position: fixed;
     left: 250px;
-    
+
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background-color: #161621 !Important;
-   
+    background-color: #000 !Important;
+
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -156,7 +156,7 @@ body {
 
     #wrapper.toggled #sidebar-wrapper i {
         float:right;
-    } 
+    }
 
     #page-content-wrapper {
         padding: 20px;
@@ -196,29 +196,29 @@ body {
 
     #wrapper.toggled #sidebar-wrapper {
         width: 140px;
-        
-        
+
+
     }
-    
+
     #wrapper.toggled span {
         visibility:visible;
         position:relative;
         left:70px;
         bottom:13px;
-        
+
     }
 
 #wrapper span {
         visibility:hidden;
-        
+
     }
   #wrapper.toggled   i {
  float:right;
- } 
- 
+ }
+
   #wrapper   i {
  float:right;
- } 
+ }
 
     #page-content-wrapper {
         padding: 5px;
@@ -231,4 +231,3 @@ body {
     }
 }
 
- 
