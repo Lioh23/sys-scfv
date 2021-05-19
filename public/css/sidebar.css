@@ -10,7 +10,7 @@ body {
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
-
+    width: 100%;
 }
 
 #wrapper.toggled {
@@ -78,9 +78,34 @@ body {
     right: 5px;
 }
 
+#menu-toggle {
+    font-size:20px !Important;
+    transition: all .2s ease;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    position: relative;
+    left: 10px;
+    transition: all .4s ease;
+}
+
+#wrapper #menu-toggle:hover {
+    transform: rotate(180deg);
+}
+
+
 
 #wrapper.toggled #menu-toggle {
-    transform: rotate(180deg) translateX(-65%);
+    transform: rotate(180deg);
+    transition: all .4s ease;
+}
+
+#wrapper.toggled #menu-toggle:hover {
+    transform: rotate(180deg);
 }
 
 .sidebar-nav li a:hover {
@@ -99,6 +124,8 @@ body {
     height: 65px;
     font-size: 18px;
     line-height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -107,7 +134,8 @@ body {
 
 #wrapper.toggled .sidebar-nav > .sidebar-brand a {
     color: #999999;
-    margin-top: 20px;
+    margin-right: -5px;
+    transition: all .4s ease;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -128,18 +156,17 @@ body {
 
 @media(min-width: 1200px) {
     #wrapper {
-        padding-left: 160px;
         width: 100%;
     }
 }
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 160px;
+        padding-left: 200px;
     }
 
     #wrapper.toggled {
-        padding-left: 0;
+        padding-left: 40px;
     }
 
     #sidebar-wrapper {

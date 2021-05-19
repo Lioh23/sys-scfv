@@ -13,7 +13,7 @@
 
 </head>
 <body>
-  <div class="container">
+  {{-- <div class="container"> --}}
     <div class="row">
         <div id="wrapper">
 
@@ -21,7 +21,7 @@
           <div id="sidebar-wrapper">
               <ul class="sidebar-nav" style="margin-left:0;">
                   <li class="sidebar-brand">
-                    <a href="#menu-toggle"  id="menu-toggle" style="float:right;" > <i class="fa fa-angle-double-left " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i> </a>
+                    <a href="#menu-toggle"  id="menu-toggle"> <i class="fa fa-angle-double-right " aria-hidden="true" aria-hidden="true"></i></a>
                   </li>
                   <li>
                     <a href="#submenuTecnicos" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="submentuTecnicos" class="collapsed">
